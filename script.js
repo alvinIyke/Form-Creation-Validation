@@ -44,21 +44,32 @@ document.addEventListener("DOMContentLoaded", function() {
             isValid = false;
         }
 
-        if (isValid) {
-            console.log("Registration successful!");
-            // Here you would typically send the form data to a server
-            // For demonstration, we'll just log the values
-            console.log('Username:', username);
-            console.log('Email:', email);
-            console.log('Password:', password);
-        } else {
-            console.log('Form is invalid, please correct the errors');
-        }
-    });
+       // Make feedbackDiv visible
+       feedbackDiv.style.display = "block";
+
+       if (isValid) {
+      // Registration is successful
+       feedbackDiv.textContent = "Registration successful!";
+       feedbackDiv.style.color = "#28a745";
+       } else {
+    // Registration failed, display error messages
+       feedbackDiv.innerHTML = messages.join("<br>");
+       feedbackDiv.style.color = "#dc3545";
+    }
+            
+      
+          
+    
+
+    
+    
+
+
 
     // Helper function to validate email format
     function isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
-});
+} 
+)});
