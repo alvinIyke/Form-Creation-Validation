@@ -1,8 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("registration-form");
     const usernameInput = document.getElementById("username");
+    const usernameError = document.getElementById("usernameError");
     const emailInput = document.getElementById("email");
+    const emailError = document.getElementById("emailError")
     const passwordInput = document.getElementById("password");
+    const passwordError = document.getElementById("passwordError");
     const feedbackDiv = document.getElementById("form-feedback")
 
     form.addEventListener("submit", function(event) {
